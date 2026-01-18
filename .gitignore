@@ -1,5 +1,5 @@
-# Binaries
-cacto-cms
+# Binaries (compiled executables - root level only)
+/cacto-cms
 /artisan
 *.exe
 *.exe~
