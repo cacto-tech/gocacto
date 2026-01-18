@@ -1,0 +1,15 @@
+package components
+
+templ Text(data TextData) {
+	<section class="py-12 lg:py-16">
+		<div class="container">
+			<div class="max-w-3xl mx-auto prose prose-lg max-w-none">
+				@templ.Raw(data.Content)
+			</div>
+		</div>
+	</section>
+}
+
+type TextData struct {
+	Content string
+}

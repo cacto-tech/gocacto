@@ -1,0 +1,51 @@
+package admin
+
+templ Dashboard(userEmail string, userRole string) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>Admin Dashboard - Cacto CMS</title>
+			<link rel="stylesheet" href="/static/css/output.css"/>
+		</head>
+		<body class="min-h-screen bg-gray-50">
+			<header class="bg-white border-b border-gray-200 shadow-sm">
+				<div class="container">
+					<div class="flex items-center justify-between h-16">
+						<h1 class="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
+						<div class="flex items-center space-x-4">
+							<span class="text-sm text-gray-600">{ userEmail }</span>
+							<span class="text-sm text-gray-500">({ userRole })</span>
+							<a href="/admin/logout" class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm font-medium">
+								Logout
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="container py-8">
+				<div class="card p-8 mb-8">
+					<h2 class="text-2xl font-bold text-gray-900 mb-4">Welcome!</h2>
+					<p class="text-gray-700">
+						Welcome to Cacto CMS Admin Panel. You can manage content from here.
+					</p>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<div class="card p-6">
+						<h3 class="text-sm font-medium text-gray-600 mb-2">Total Pages</h3>
+						<div class="text-3xl font-bold text-blue-600">-</div>
+					</div>
+					<div class="card p-6">
+						<h3 class="text-sm font-medium text-gray-600 mb-2">Total Components</h3>
+						<div class="text-3xl font-bold text-blue-600">-</div>
+					</div>
+					<div class="card p-6">
+						<h3 class="text-sm font-medium text-gray-600 mb-2">Total Media</h3>
+						<div class="text-3xl font-bold text-blue-600">-</div>
+					</div>
+				</div>
+			</main>
+		</body>
+	</html>
+}

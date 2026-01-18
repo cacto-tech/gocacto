@@ -1,0 +1,3 @@
+-- This file is intentionally empty
+-- Seed data is now managed through app/infrastructure/database/seeds/ directory
+-- Run seeders via: ./artisan migrate:fresh --seed

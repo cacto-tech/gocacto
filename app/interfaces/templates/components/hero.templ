@@ -1,0 +1,32 @@
+package components
+
+templ Hero(data HeroData) {
+	<section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20 lg:py-32">
+		<div class="container">
+			<div class="max-w-3xl mx-auto text-center space-y-6">
+				<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+					{ data.Title }
+				</h1>
+				if data.Subtitle != "" {
+					<p class="text-xl md:text-2xl text-blue-100">
+						{ data.Subtitle }
+					</p>
+				}
+				if data.ButtonText != "" {
+					<div class="pt-4">
+						<a href={ templ.SafeURL(data.ButtonLink) } class="btn-primary inline-block">
+							{ data.ButtonText }
+						</a>
+					</div>
+				}
+			</div>
+		</div>
+	</section>
+}
+
+type HeroData struct {
+	Title      string
+	Subtitle   string
+	ButtonText string
+	ButtonLink string
+}

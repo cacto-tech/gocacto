@@ -1,0 +1,26 @@
+package pages
+
+templ PageWithComponents(components []templ.Component) {
+	for _, component := range components {
+		@component
+	}
+}
+
+templ SimpleContent(title, content string) {
+	<section class="py-12 lg:py-16">
+		<div class="container">
+			<div class="max-w-3xl mx-auto">
+				if title != "" {
+					<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+						{ title }
+					</h1>
+				}
+				if content != "" {
+					<div class="prose prose-lg max-w-none text-gray-700">
+						@templ.Raw(content)
+					</div>
+				}
+			</div>
+		</div>
+	</section>
+}

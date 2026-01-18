@@ -1,0 +1,21 @@
+{
+  "name": "cacto-cms",
+  "version": "1.0.0",
+  "description": "Enterprise CMS built with Go and Tailwind CSS v4",
+  "type": "module",
+  "scripts": {
+    "css:dev": "postcss ./web/static/css/input.css -o ./web/static/css/output.css --watch",
+    "css:build": "NODE_ENV=production postcss ./web/static/css/input.css -o ./web/static/css/output.css",
+    "css:watch": "postcss ./web/static/css/input.css -o ./web/static/css/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
