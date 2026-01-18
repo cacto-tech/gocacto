@@ -1,6 +1,6 @@
 # Binaries
 cacto-cms
-artisan
+/artisan
 *.exe
 *.exe~
 *.dll
